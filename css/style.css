@@ -1,0 +1,197 @@
+body{
+    margin: 0%;
+    padding: 0%;   
+    box-sizing: border-box;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15vh 78vh 7vh; /* izquierda a derecha*/
+    grid-template-columns:20vw 80vw  ;/*arriba abajo*/
+    grid-template-areas: 
+    'nav filtro'
+    'nav section'
+    'footer footer';
+}
+
+
+.nav{
+    padding: 20px;
+    grid-area: nav;
+    background-color: rgb(110, 110, 205);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.naviconos{
+    margin: 0;
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+
+}
+
+
+li{
+    padding: 1em;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+@media (max-width:576px){
+
+    Body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 90vw 1fr;
+        grid-template-areas: 
+        'nav'
+        'filtro'
+        'section'
+        'footer';
+    }
+
+    ul {
+        display: none;
+    } 
+
+} 
+
+
+
+
+
+
+@media (min-width:576px){
+
+    .fa-bars { visibility: hidden;
+    }
+
+}
+
+
+@media (max-width:576px){
+
+.section .container{
+    padding: 0%;
+    margin: 0%;
+    height: 60%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'nav'
+    'filtro'
+    'section'
+    'footer';
+   }
+}
+
+
+
+
+
+.filtro{
+    grid-area: filtro;
+    margin: 0%;
+    padding: 0.5em;
+    background-color: rgb(181, 173, 173);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.select{
+    margin: 0px;
+    width: 85%;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+
+
+.section{
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+
+.container{
+    margin: 0%;
+    padding: 0%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center; /*alinear las card dentro del div*/
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.card{
+    margin: 5px;
+    padding: 90px;
+    height: 100px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+img{
+    width: 150%;
+    height: 150%;
+    border-radius: 10px;
+}
+
+.boton{
+    width: 100%;
+    background-color:blue;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.paginacion{
+    display: flex;
+    border: 0.5px solid blue;
+    margin: 10px;  
+
+}
+
+.paginacion div{
+    padding: 0.5em; 
+    border: 0.5px solid blue;
+    color: blue;
+  
+    
+}
+    
+
+footer{
+    grid-area: footer;
+    background-color: blue;
+    text-align: center;
+    color: white;   
+}
+
+.parrafooter{
+    margin: 0;
+}
+
+i{
+    margin: 5px;
+}
+
+
